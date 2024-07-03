@@ -1,0 +1,896 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+  <title>Health Checks</title>
+
+  <style>
+
+    .table-container {
+
+      display: none;
+
+      width: 80%;
+
+      table-layout: fixed;
+
+    }
+
+ 
+
+    table {
+
+      border-collapse: collapse;
+
+      width: 50%;
+
+      margin-left: 400px;
+
+    }
+
+ 
+
+    th,
+
+    td {
+
+      border: 1px solid #155976;
+
+      text-align: left;
+
+      padding: 5px;
+
+    }
+
+ 
+
+    th {
+
+      background-color: rgb(242, 242, 242);
+
+    }
+
+ 
+
+    button {
+
+      background-color: #4CAF50;
+
+      border: none;
+
+      color: white;
+
+      padding: 10px 20px;
+
+      text-align: center;
+
+      text-decoration: none;
+
+      display: inline-block;
+
+      font-size: 16px;
+
+      margin: 4px 2px;
+
+      cursor: pointer;
+
+      margin-left:100px;    }
+
+    button:hover {
+
+      background-color: #45a049;
+
+    }
+
+
+
+.heading-container {
+
+  background-color: skyblue;
+
+  padding: 20px;
+
+  display: inline-block;
+
+  width:97%;
+
+  text-align: center;
+
+  margin-bottom: 20px;
+
+  margin-bottom: 2px;
+
+}
+
+ 
+
+.heading-with-line {
+
+  position: relative;
+
+  display: inline-block;
+
+  margin: 0;
+
+  padding: 0;
+
+}
+
+ 
+
+.button-container{
+
+  background-color: skyblue;
+
+  padding: 20px;
+
+  display: inline-block;
+
+  width:97%;
+
+  text-align: center;
+
+  margin-bottom: 20px;
+
+}
+
+ 
+
+ 
+
+  </style>
+
+</head>
+
+ 
+
+<body>
+
+  <div class="heading-container">
+
+    <h1 class="heading-with-line">Environments</h1>
+
+  </div>
+
+  <div class="button-container">
+
+      <button onclick="showTable('iqa')">IQA</button>
+
+      <button style="background-color: #008CBA" onclick="showTable('stage')">STAGE</button>
+
+      <button style="background-color: #deb887" onclick="showTable('usprod')">USPROD</button>
+
+      <button style="background-color: grey" onclick="showTable('euprod')">EUPROD</button>
+
+</div>
+
+  <div id="iqa-table" class="table-container">
+
+    <table style="background-color: #ACE1AF">
+
+      <tr>
+
+        <th>Project</th>
+
+        <th>Link</th>
+
+      </tr>
+
+      <tr>
+
+        <td>GKMQ</td>
+
+        <td><a href="https://qnalbadgkmq01:8162/admin/queues.jsp" target="_blank">qnalbadgkmq01</a><br>
+            <a href="https://qnalbadgkmq02:8162/admin/queues.jsp" target="_blank">qnalbadgkmq02</a></td>
+
+      </tr>
+
+      <tr>
+
+        <td>GKApp</td>
+
+        <td>
+
+          <a href="https://nalb-qaadgkapp.vip.pa-dev.knxa/api/version" target="_blank">GKApp VIP</a><br>
+          <a href="https://qnalbadgkapp01.ops-dev.pa-dev.knxa:11339/api/version" target="_blank">qnalbadgkapp01</a><br>
+          <a href="https://qnalbadgkapp02.ops-dev.pa-dev.knxa:11339/api/version" target="_blank">qnalbadgkapp02</a><br>
+          <a href="https://qnalbadgkapp03.ops-dev.pa-dev.knxa:11339/api/version" target="_blank">qnalbadgkapp03</a><br>
+          <a href="https://qnalbadgkapp04.ops-dev.pa-dev.knxa:11339/api/version" target="_blank">qnalbadgkapp04</a><br>
+          <a href="https://qnalbadgkapp05.ops-dev.pa-dev.knxa:11339/api/version" target="_blank">qnalbadgkapp05</a><br>
+          <a href="https://qnalbadgkapp06.ops-dev.pa-dev.knxa:11339/api/version" target="_blank">qnalbadgkapp06</a><br>
+
+        </td>
+
+      </tr>
+
+      <tr>
+
+        <td>TDI</td>
+
+        <td><a href="https://qnalbadgkapp05.ops-dev.pa-dev.knxa:11339/api/tdi/health"target="_blank">qnalbtstdiap01</a><br>
+            <a href="https://qnalbadgkapp02.ops-dev.pa-dev.knxa:11339/api/tdi/health" target="_blank">qnalbtstdiap02</a>
+
+        </td>
+
+      </tr>
+
+      
+
+      <tr>
+
+        <td>onboard</td>
+
+      <td><a href="link" target="_blank">Onboard VIP</a><br>
+          <a href="https://qnalbob2xapp01.ops-dev.pa-dev.knxa:9443/kr/api/onboard/checkServerHealth"target="_blank">qnalbob2xapp01</a>,
+          <a href="https://qnalbob2xapp01.ops-dev.pa-dev.knxa:9443/kr/iqaTestclient/2xlogin.2x"target="_blank">qnalbob2xapp01 Login_page</a>
+          <a href="https://qnalbob2xapp02.ops-dev.pa-dev.knxa:9443/kr/api/onboard/checkServerHealth"target="_blank">qnalbob2xapp02</a>,
+          <a href="https://qnalbob2xapp02.ops-dev.pa-dev.knxa:9443/kr/iqaTestclient/2xlogin.2x"target="_blank">qnalbob2xapp02 Login_page</a>
+          <a href="https://qnalbob2xapp03.ops-dev.pa-dev.knxa:9443/kr/api/onboard/checkServerHealth"target="_blank">qnalbob2xapp03</a>,
+          <a href="https://qnalbob2xapp03.ops-dev.pa-dev.knxa:9443/kr/iqaTestclient/2xlogin.2x"target="_blank">qnalbob2xapp03 Login_page</a>
+
+
+        </td>
+
+      </tr>
+
+      <tr>
+
+        <td>BWS</td>
+
+        <td>
+
+          <a href="https://qnalbobbwsap02.ops-dev.pa-dev.knxa:8080/api/onboard/v1/verifyConnections?expanded=true"target="_blank">qnalbobbwsap02</a>,
+          <a href="https://qnalbobbwsap02.ops-dev.pa-dev.knxa:9080/OnboardAdmin/audit/systemHealth"target="_blank">qnalbobbwsap02 ADMIN</a></br>
+          <a href="https://qnalbobbwsap03.ops-dev.pa-dev.knxa:8080/api/onboard/v1/verifyConnections?expanded=true"target="_blank">qnalbobbwsap03</a>,
+          <a href="https://qnalbobbwsap03.ops-dev.pa-dev.knxa:9080/OnboardAdmin/audit/systemHealth"target="_blank">qnalbobbwsap03 ADMIN</a>
+
+        </td>
+
+      </tr>
+
+      <tr>
+
+        <td>Workbench</td>
+
+        <td><a href="https://qnalbobwbwlp01:9443/2xWorkbench/jsp/wbLogin.jsf" target="_blank">qnalbobwbwlp01</a></td>
+
+      </tr>
+      
+      <tr>
+
+        <td>Elastic Search</td>
+
+        <td><a href="https://qnalbobbwssr01.ops-dev.pa-dev.knxa:9200/"target="_blank">qnalbobbwssr01</a>,
+            <a href="https://qnalbobbwssr01:9200/_cluster/health" target="_blank">qnalbobbwssr01 cluster health</a><br>
+            <a href="https://qnalbobbwssr02.ops-dev.pa-dev.knxa:9200/" target="_blank">qnalbobbwssr02</a>,
+            <a href="https://qnalbobbwssr02:9200/_cluster/health" target="_blank">qnalbobbwssr02 cluster health</a><br>
+            <a href="https://qnalbobbwssr03.ops-dev.pa-dev.knxa:9200/"target="_blank">qnalbobbwssr03</a>,
+            <a href="https://qnalbobbwssr03:9200/_cluster/health" target="_blank">qnalbobbwssr03 cluster health</a><br>
+            <a href="https://qnalbobbwssr04.ops-dev.pa-dev.knxa:9200/"target="_blank">qnalbobbwssr04</a>,
+            <a href="https://qnalbobbwssr04:9200/_cluster/health" target="_blank">qnalbobbwssr04 cluster health</a>
+
+        </td>
+
+      </tr>
+
+      <tr>
+
+        <td>AMQ</td>
+
+        <td><a href="https://qnalbobbwsmq01.ops-dev.pa-dev.knxa:8161/admin/" target="_blank">qnalbobbwsmq01</a><br>
+            <a href="https://qnalbobbwsmq02.ops-dev.pa-dev.knxa:8161/admin/" target="_blank">qnalbobbwsmq02</a>
+
+        </td>
+
+      </tr>
+
+      <tr>
+
+        <td>Lucid</td>
+
+        <td><a href="https://qnalbtsadmui01:8443/ibp/admin/login?cname=prodTestclient"target="_blank">qnalbtsadmui01 Admin</a>,
+          <a href="https://qnalbtsadmui01:9443/ibp/admin/login?cname=prodTestclient"target="_blank">qnalbtsadmui01 Foundation</a><br>
+            <a href="https://qnalbtsadmui02:8443/ibp/admin/login?cname=prodTestclient" target="_blank">qnalbtsadmui02 Admin</a>,
+            <a href="https://qnalbtsadmui02:9443/ibp/admin/login?cname=prodTestclient"target="_blank">qnalbtsadmui02 Foundation</a><br>
+            <a href="https://qnalbtsadmui05.ops-dev.pa-dev.knxa:9443/" target="_blank">qnalbobmhmbi05 keycloak</a><br>
+            <a href="https://qnalbtsadmui06.ops-dev.pa-dev.knxa:9443/" target="_blank">qnalbobmhmbi06 keycloak</a><br>
+            <a href="https://qnalbobbwsui03.ops-dev.pa-dev.knxa:9443/onboardui/verifyHealth"target="_blank">qnalbobmhmbi03 ExpressUI</a><br>
+            <a href="https://qnalbobbwsui04.ops-dev.pa-dev.knxa:9443/onboardui/verifyHealth"target="_blank">qnalbobmhmbi04 ExpressUI</a>
+
+        </td>
+      </tr>
+
+      <tr>
+        <td>Muhimbi</td>
+        <td><a href="https://qnalbobmhmbi01.ops-dev.pa-dev.knxa:41734/Muhimbi.DocumentConverter.WebService/?wsdl"target="_blank">qnalbobmhmbi01.ops-dev.pa-dev.knxa</a><br>
+            <a href="https://qnalbobmhmbi02.ops-dev.pa-dev.knxa:41734/Muhimbi.DocumentConverter.WebService/?wsdl"target="_blank">qnalbobmhmbi02.ops-dev.pa-dev.knxa</a>
+        </td>
+      </tr>
+
+      <tr>
+        <td>Terracotta</td>
+      <td>qnalbplterra02.ops-dev.pa-dev.knxa<br>qnalbplterra05.ops-dev.pa-dev.knxa</td>
+      </tr>
+
+      <tr>
+        <td>Symentec/AV</td>
+        <td>qnalbplbgsav01.ops-dev.pa-dev.knxa</td>
+      </tr>
+    </table>
+
+  </div>
+
+  <div id="stage-table" class="table-container">
+
+    <table style="background-color: #F0F8FF">
+
+      <tr>
+
+        <th>Project</th>
+
+        <th>Link</th>
+
+      </tr>
+
+      <tr>
+
+      <tr>
+
+        <td>Downpages</td>
+
+        <td><a href="https://2x-staging.kenexa.com/kr/stgTestclient/2xlogin.2x" target="_blank">Downpages</a></td>
+
+      </tr>
+
+      <tr>
+
+        <td>GKMQ</td>
+
+        <td>
+
+          <a href="https://snasgadgkmq03:8162/admin/queues.jsp" target="_blank">snasgadgkmq03.ops.hosting.knxa</a></br>
+          <a href="https://snasgadgkmq04:8162/admin/queues.jsp" target="_blank">snasgadgkmq04.ops.hosting.knxa</a></td>
+
+      </tr>
+
+      <tr>
+
+        <td>GKApp</td>
+
+        <td>
+
+          <a href="https://nasg-adgkapp.vip.hosting.knxa/api/version" target="_blank">GKApp VIP</a></br>
+          <a href="https://snasgadgkapp13:11339/api/version" target="_blank">snasgadgkapp13</a></br>
+          <a href="https://snasgadgkapp14:11339/api/version" target="_blank">snasgadgkapp14</a></br>
+          <a href="https://snasgadgkapp15:11339/api/version" target="_blank">snasgadgkapp15</a></br>
+          <a href="https://snasgadgkapp16:11339/api/version" target="_blank">snasgadgkapp16</a></br>
+          <a href="https://snasgadgkapp17:11339/api/version" target="_blank">snasgadgkapp17</a></br>
+          <a href="https://snasgadgkapp18:11339/api/version" target="_blank">snasgadgkapp18</a></br>
+          <a href="https://snasgadgkapp19:11339/api/version" target="_blank">snasgadgkapp19</a></br>
+          <a href="https://snasgadgkapp20:11339/api/version" target="_blank">snasgadgkapp20</a></br>
+
+        </td>
+
+      </tr>
+
+      <tr>
+
+        <td>TDI</td>
+
+        <td><a href="https://snasgadgkapp15.ops.hosting.knxa:11339/api/tdi/health"target="_blank">snasgtstdiap03</a></br>
+            <a href="https://snasgadgkapp15.ops.hosting.knxa:11339/api/tdi/health" target="_blank">snasgtstdiap04</a></br>
+
+        </td>
+
+      </tr>
+
+      <td>onboard</td>
+
+      <td>
+
+        <a href="https://nasg-ob2xapp.vip.hosting.knxa" target="_blank">ONBORD VIP</a></br>
+        <a href="https://snasgob2xapp18.ops.hosting.knxa:9443/kr/api/onboard/checkServerHealth"target="_blank">snasgob2xapp18</a>,
+        <a href="https://snasgob2xapp18.ops.hosting.knxa:9443/kr/stgTestclient/2xlogin.2x"target="_blank">snasgob2xapp18 Login_page</a></br>
+        <a href="https://snasgob2xapp19.ops.hosting.knxa:9443/kr/api/onboard/checkServerHealth"target="_blank">snasgob2xapp19</a>,
+        <a href="https://snasgob2xapp19.ops.hosting.knxa:9443/kr/stgTestclient/2xlogin.2x"target="_blank">snasgob2xapp19 Login_page</a></br>
+        <a href="https://snasgob2xapp27.ops.hosting.knxa:9443/kr/api/onboard/checkServerHealth"target="_blank">snasgob2xapp27</a>,
+        <a href="https://snasgob2xapp27.ops.hosting.knxa:9443/kr/stgTestclient/2xlogin.2x"target="_blank">snasgob2xapp27 Login_page</a></br>
+        <a href="https://snasgob2xapp28.ops.hosting.knxa:9443/kr/api/onboard/checkServerHealth"target="_blank">snasgob2xapp28</a>,
+        <a href="https://snasgob2xapp28.ops.hosting.knxa:9443/kr/stgTestclient/2xlogin.2x"target="_blank">snasgob2xapp28 Login_page</a>
+
+      </td>
+
+      </tr>
+
+      <tr>
+
+        <td>BWS</td>
+
+        <td><a href="https://snasgobbwsap05:8080/api/onboard/v1/verifyConnections?expanded=true"target="_blank">snasgobbwsap05</a>,
+          <a href="https://snasgobbwsap05:9080/OnboardAdmin/audit/systemHealth" target="_blank">snasgobbwsap05 Admin</a></br>
+          <a href="https://snasgobbwsap06:8080/api/onboard/v1/verifyConnections?expanded=true"target="_blank">snasgobbwsap06</a>,
+          <a href="https://snasgobbwsap06:9080/OnboardAdmin/audit/systemHealth" target="_blank">snasgobbwsap06 Admin</a>
+
+        </td>
+
+      </tr>
+
+      <tr>
+
+        <td>Elastic Search</td>
+
+        <td><a href="https://snasgobbwssr07:9200/" target="_blank">snasgobbwssr07</a>,
+          <a href="https://snasgobbwssr07:9200/" target="_blank">snasgobbwssr07 cluster_health</a></br>
+          <a href="https://snasgobbwssr08:9200/" target="_blank">snasgobbwssr08</a>,
+          <a href="https://snasgobbwssr08:9200/" target="_blank">snasgobbwssr08 cluster_health</a></br>
+          <a href="https://snasgobbwssr09:9200/" target="_blank">snasgobbwssr09</a>,
+          <a href="https://snasgobbwssr09:9200/" target="_blank">snasgobbwssr09 cluster_health</a></br>
+          <a href="https://snasgobbwssr10:9200/" target="_blank">snasgobbwssr10</a>,
+          <a href="https://snasgobbwssr10:9200/" target="_blank">snasgobbwssr10 cluster_health</a>
+
+        </td>
+
+      </tr>
+
+      <tr>
+
+        <td>Workbench</td>
+
+        <td><a href="https://snasgobwbwlp03.ops.hosting.knxa:9443/2xWorkbench/jsp/wbLogin.jsf"target="_blank">snasgobwbwlp03</a></br>
+            <a href="https://snasgobwbwlp04.ops.hosting.knxa:9443/2xWorkbench/jsp/wbLogin.jsf"target="_blank">snasgobwbwlp04</a></br>
+
+        </td>
+
+      </tr>
+
+      <tr>
+
+        <td>AMQ</td>
+
+        <td><a href="http://snasgobbwsmq04.ops.hosting.knxa:8161/admin/index.jsp"target="_blank">snasgobbwsmq04</a></br>
+          <a href="http://snasgobbwsmq05.ops.hosting.knxa:8161/admin/index.jsp" target="_blank">snasgobbwsmq05</a></br>
+
+        </td>
+
+      </tr>
+
+      <tr>
+
+        <td>Lucid</td>
+
+        <td><a href="https://snasgtsadmui01.ops.hosting.knxa:8443/ibp/admin/login?cname=prodTestclient"target="_blank">snasgtsadmui01 Admin</a>
+          <a href="https://snasgtsadmui01.ops.hosting.knxa:9443/ibp/admin/login?cname=prodTestclient"target="_blank">snasgtsadmui01 Foundation</a><br>
+          <a href="https://snasgtsadmui02.ops.hosting.knxa:8443/ibp/admin/login?cname=prodTestclient" target="_blank">snasgtsadmui02 Admin</a>
+          <a href="https://snasgtsadmui02.ops.hosting.knxa:9443/ibp/admin/login?cname=prodTestclient"target="_blank">snasgtsadmui02 Foundation</a><br>
+          <a href="https://snasgtsadmui05.ops.hosting.knxa:9443/" target="_blank">snasgtsadmui05 keycloak</a><br>
+          <a href="https://snasgtsadmui06.ops.hosting.knxa:9443/" target="_blank">snasgtsadmui06 keycloak</a><br>
+          <a href="https://snasgtsobui01.ops.hosting.knxa:9443/onboardui/verifyHealth"target="_blank">snasgtsobui01 ExpressUI</a><br>
+          <a href="https://snasgtsobui02.ops.hosting.knxa:9443/onboardui/verifyHealth"target="_blank">snasgtsobui02 ExpressUI</a>
+
+        </td>
+      </tr>
+
+      <tr>
+        <td>Muhimbi</td>
+        <td><a href="https://snasgobmhmbi01.ops.hosting.knxa:41734/Muhimbi.DocumentConverter.WebService/?wsdl" target="_blank">snasgobmhmbi01.ops.hosting.knxa</a><br>
+        <a href="https://snasgobmhmbi02.ops.hosting.knxa:41734/Muhimbi.DocumentConverter.WebService/?wsdl" target="_blank">snasgobmhmbi02.ops.hosting.knxa</a>
+      </td>
+      </tr>
+
+      <tr>
+        <td>Teracotta</td>
+          <td>snasgplterra03.ops.hosting.knxa<br>snasgplterra04.ops.hosting.knxa</td>
+      </tr>
+      <tr>
+        <td>Symmantec/AV</td>
+        <td>snasgplbgsav01.ops.hosting.knxa<br>snasgplbgsav02.ops.hosting.knxa</td>
+      </tr>
+<tr>
+  <td>JUMP_BOX URL</td>
+  <td>snasgopwnops01.ops.hosting.knxa</td>
+</tr>
+    </table>
+
+  </div>
+
+  <div id="usprod-table" class="table-container">
+
+    <table style="background-color: #F4E7D7">
+
+      <tr>
+
+        <th>Project</th>
+
+        <th>Link</th>
+
+      </tr>
+
+      <tr>
+
+        <td>Downpages</td>
+
+        <td><a href="https://2xrecruit.kenexa.com/kr/QAO/2xlogin.2x" target="_blank">Downpages</a></td>
+
+      </tr>
+
+      <tr>
+
+        <td>GKMQ</td>
+
+        <td>
+
+          <a href="https://pnapdadgkmq03:8162/admin/queues.jsp" target="_blank">pnapdadgkmq03</a></br>
+          <a href="https://pnapdadgkmq04:8162/admin/queues.jsp" target="_blank">pnapdadgkmq04</a>
+
+        </td>
+
+      </tr>
+
+      <tr>
+
+        <td>GKApp</td>
+
+        <td>
+
+          <a href="https://napd-adgkapp.vip.hosting.knxa/api/version" target="_blank">GKAPP VIP</a><br>
+          <a href="https://pnapdadgkapp18.ops.hosting.knxa:11339/api/version" target="_blank">pnapdadgkapp18.ops.hosting.knxa</a><br>
+          <a href="https://pnapdadgkapp19.ops.hosting.knxa:11339/api/version" target="_blank">pnapdadgkapp19.ops.hosting.knxa</a><br>
+          <a href="https://pnapdadgkapp20.ops.hosting.knxa:11339/api/version" target="_blank">pnapdadgkapp20.ops.hosting.knxa</a><br>
+          <a href="https://pnapdadgkapp21.ops.hosting.knxa:11339/api/version" target="_blank">pnapdadgkapp21.ops.hosting.knxa</a><br>
+          <a href="https://pnapdadgkapp22.ops.hosting.knxa:11339/api/version" target="_blank">pnapdadgkapp22.ops.hosting.knxa</a><br>
+          <a href="https://pnapdadgkapp23.ops.hosting.knxa:11339/api/version" target="_blank">pnapdadgkapp23.ops.hosting.knxa</a><br>
+          <a href="https://pnapdadgkapp24.ops.hosting.knxa:11339/api/version" target="_blank">pnapdadgkapp24.ops.hosting.knxa</a><br>
+          <a href="https://pnapdadgkapp25.ops.hosting.knxa:11339/api/version" target="_blank">pnapdadgkapp25.ops.hosting.knxa</a><br>
+          <a href="https://pnapdadgkapp26.ops.hosting.knxa:11339/api/version" target="_blank">pnapdadgkapp26.ops.hosting.knxa</a><br>
+          <a href="https://pnapdadgkapp27.ops.hosting.knxa:11339/api/version" target="_blank">pnapdadgkapp27.ops.hosting.knxa</a>
+
+        </td>
+
+      </tr>
+
+      <tr>
+
+        <td>TDI</td>
+
+        <td>
+
+          <a href="https://pnapdadgkapp19.ops.hosting.knxa:11339/api/tdi/health"target="_blank">pnapdtstdiap01.ops.hosting.knxa</a><br>
+          <a href="https://pnapdadgkapp19.ops.hosting.knxa:11339/api/tdi/health"target="_blank">pnapdtstdiap02.ops.hosting.knxa</a><br>
+
+        </td>
+
+      </tr>
+
+      <tr>
+
+        <td>Onboard</td>
+
+        <td>
+
+          <a href="https://napd-ob2xapp.vip.hosting.knxa/" target="_blank">ONBORD VIP</a></br>
+          <a href="https://pnapdob2xapp22.ops.hosting.knxa:9443/kr/api/onboard/checkServerHealth"target="_blank">pnapdob2xapp22</a>,
+          <a href="https://pnapdob2xapp22.ops.hosting.knxa:9443/kr/stgTestclient/2xlogin.2x "target="_blank">pnapdob2xapp22 Login_page</a><br>
+          <a href="https://pnapdob2xapp23.ops.hosting.knxa:9443/kr/api/onboard/checkServerHealth "target="_blank">pnapdob2xapp23</a>,
+          <a href="https://pnapdob2xapp23.ops.hosting.knxa:9443/kr/stgTestclient/2xlogin.2x "target="_blank">pnapdob2xapp23 Login_page</a><br>
+          <a href="https://pnapdob2xapp24.ops.hosting.knxa:9443/kr/api/onboard/checkServerHealth "target="_blank">pnapdob2xapp24</a>,
+          <a href="https://pnapdob2xapp24.ops.hosting.knxa:9443/kr/stgTestclient/2xlogin.2x "target="_blank">pnapdob2xapp24 Login_page</a><br>
+          <a href="https://pnapdob2xapp25.ops.hosting.knxa:9443/kr/api/onboard/checkServerHealth "target="_blank">pnapdob2xapp25</a>,
+          <a href="https://pnapdob2xapp25.ops.hosting.knxa:9443/kr/stgTestclient/2xlogin.2x "target="_blank">pnapdob2xapp25 Login_page</a><br>
+          <a href="https://pnapdob2xapp26.ops.hosting.knxa:9443/kr/api/onboard/checkServerHealth "target="_blank">pnapdob2xapp26</a>,
+          <a href="https://pnapdob2xapp26.ops.hosting.knxa:9443/kr/stgTestclient/2xlogin.2x "target="_blank">pnapdob2xapp26 Login_page</a><br>
+          <a href="https://pnapdob2xapp27.ops.hosting.knxa:9443/kr/api/onboard/checkServerHealth "target="_blank">pnapdob2xapp27</a>,
+          <a href="https://pnapdob2xapp27.ops.hosting.knxa:9443/kr/stgTestclient/2xlogin.2x "target="_blank">pnapdob2xapp27 Login_page</a><br>
+          <a href="https://pnapdob2xapp28.ops.hosting.knxa:9443/kr/api/onboard/checkServerHealth "target="_blank">pnapdob2xapp28</a>,
+          <a href="https://pnapdob2xapp28.ops.hosting.knxa:9443/kr/stgTestclient/2xlogin.2x "target="_blank">pnapdob2xapp28 Login_page</a><br>
+          <a href="https://pnapdob2xapp29.ops.hosting.knxa:9443/kr/api/onboard/checkServerHealth "target="_blank">pnapdob2xapp29</a>,
+          <a href="https://pnapdob2xapp29.ops.hosting.knxa:9443/kr/stgTestclient/2xlogin.2x "target="_blank">pnapdob2xapp29 Login_page</a><br>
+          <a href="https://pnapdob2xapp36.ops.hosting.knxa:9443/kr/api/onboard/checkServerHealth "target="_blank">pnapdob2xapp36</a>,
+          <a href="https://pnapdob2xapp36.ops.hosting.knxa:9443/kr/stgTestclient/2xlogin.2x "target="_blank">pnapdob2xapp36 Login_page</a><br>
+          <a href="https://pnapdob2xapp37.ops.hosting.knxa:9443/kr/api/onboard/checkServerHealth "target="_blank">pnapdob2xapp37</a>,
+          <a href="https://pnapdob2xapp37.ops.hosting.knxa:9443/kr/stgTestclient/2xlogin.2x "target="_blank">pnapdob2xapp37 Login_page</a><br>
+
+      </tr>
+
+      <tr>
+
+        <td>BWS</td>
+
+        <td><a href="https://pnapdobbwsap07.ops.hosting.knxa:8080/api/onboard/v1/verifyConnections?expanded=true" target="_blank">pnapdobbwsap07</a>,
+            <a href="https://pnapdobbwsap07.ops.hosting.knxa:9080/OnboardAdmin/audit/systemHealth" target="_blank">pnapdobbwsap07 Admin</a><br>
+            <a href="https://pnapdobbwsap08.ops.hosting.knxa:8080/api/onboard/v1/verifyConnections?expanded=true" target="_blank">pnapdobbwsap08</a>,
+            <a href="https://pnapdobbwsap08.ops.hosting.knxa:9080/OnboardAdmin/audit/systemHealth "target="_blank">pnapdobbwsap08 Admin </a><br>
+            <a href="https://pnapdobbwsap09.ops.hosting.knxa:8080/api/onboard/v1/verifyConnections?expanded=true" target="_blank">pnapdobbwsap09</a>,
+            <a href="https://pnapdobbwsap09.ops.hosting.knxa:9080/OnboardAdmin/audit/systemHealth "target="_blank">pnapdobbwsap09 Admin </a><br>
+            <a href="https://pnapdobbwsap10.ops.hosting.knxa:8080/api/onboard/v1/verifyConnections?expanded=true"target="_blank">pnapdobbwsap10</a>,
+            <a href="https://pnapdobbwsap10.ops.hosting.knxa:9080/OnboardAdmin/audit/systemHealth"target="_blank">pnapdobbwsap10 Admin </a><br>
+
+        </td>
+
+      </tr>
+
+      <tr>
+
+        <td>Elastic Search</td>
+
+        <td>
+
+          <a href="https://pnapdobbwssr05.ops.hosting.knxa:9200/ " target="_blank">pnapdobbwssr05</a>,
+          <a href="https://pnapdobbwssr05.ops.hosting.knxa:9200/_cluster/health" target="_blank">pnapdobbwssr05 cluster_health</a></br>
+          <a href="https://pnapdobbwssr06.ops.hosting.knxa:9200/ " target="_blank">pnapdobbwssr06</a>,
+          <a href="https://pnapdobbwssr06.ops.hosting.knxa:9200/_cluster/health" target="_blank">pnapdobbwssr06 cluster_health</a></br>
+          <a href="https://pnapdobbwssr07.ops.hosting.knxa:9200/ " target="_blank">pnapdobbwssr07</a>,
+          <a href="https://pnapdobbwssr07.ops.hosting.knxa:9200/_cluster/health" target="_blank">pnapdobbwssr07 cluster_health</a></br>
+          <a href="https://pnapdobbwssr08.ops.hosting.knxa:9200/ " target="_blank">pnapdobbwssr08</a>,
+          <a href="https://pnapdobbwssr08.ops.hosting.knxa:9200/_cluster/health" target="_blank">pnapdobbwssr08 cluster_health</a>
+        </td>
+
+      </tr>
+
+        <td>Workbench</td>
+
+        <td>
+
+          <a href="https://pnapdobwbwlp03.ops.hosting.knxa:9443/2xWorkbench/jsp/wbLogin.jsf" target="_blank">pnapdobwbwlp03</a><br>
+          <a href="https://pnapdobwbwlp04.ops.hosting.knxa:9443/2xWorkbench/jsp/wbLogin.jsf" target="_blank">pnapdobwbwlp04</a><br>
+
+        </td>
+
+      </tr>
+
+      <tr>
+
+        <td>AMQ</td>
+
+        <td>
+
+          <a href="https://pnapdobbwsmq04.ops.hosting.knxa:8161/admin/index.jsp" target="_blank">pnapdobbwsmq04</a><br>
+          <a href="https://pnapdobbwsmq05.ops.hosting.knxa:8161/admin/index.jsp" target="_blank">pnapdobbwsmq05</a><br>
+
+        </td>
+
+      </tr>
+
+      <tr>
+
+        <td>Lucid</td>
+
+        <td><a href="https://pnapdtsadmui01.ops.hosting.knxa:8443/ibp/admin/login?cname=prodTestclient" target="_blank">pnapdtsadmui01 Admin</a>
+            <a href="https://pnapdtsadmui01.ops.hosting.knxa:9443/ibp/admin/login?cname=prodTestclient" target="_blank">pnapdtsadmui01 Foundation</a><br>
+            <a href="https://pnapdtsadmui02.ops.hosting.knxa:8443/ibp/admin/login?cname=prodTestclient" target="_blank">pnapdtsadmui02 Admin</a>
+            <a href="https://pnapdtsadmui02.ops.hosting.knxa:9443/ibp/admin/login?cname=prodTestclient" target="_blank">pnapdtsadmui02 Foundation</a><br>
+            <a href="https://pnapdtsadmui05.ops.hosting.knxa:9443/" target="_blank">pnapdtsadmui05 keycloak</a><br>
+            <a href="https://pnapdtsadmui06.ops.hosting.knxa:9443/" target="_blank">pnapdtsadmui06 keycloak</a><br>
+            <a href="https://pnapdtsobui01:9443/onboardui/verifyHealth" target="_blank">pnapdtsobui01 ExpressUI</a><br>
+            <a href="https://pnapdtsobui02:9443/onboardui/verifyHealth" target="_blank">pnapdtsobui02 ExpressUI</a>
+          </td>
+      </tr>
+<tr>
+      <td>Muhimbi</td>
+      <td>
+        <a href="https://pnapdobmhmbi01.ops.hosting.knxa:41734/Muhimbi.DocumentConverter.WebService/?wsdl" target="_blank">pnapdobmhmbi01.ops.hosting.knxa</a><br>
+        <a href="https://pnapdobmhmbi02.ops.hosting.knxa:41734/Muhimbi.DocumentConverter.WebService/?wsdl" target="_blank">pnapdobmhmbi02.ops.hosting.knxa</a>
+        </td>
+      </tr>
+
+      <tr>
+        
+        <td>teracotta</td>
+        <td>pnapdplterra03.ops.hosting.knxa<br>pnapdplterra04.ops.hosting.knxa</td>
+      </tr>
+
+      <tr>
+        <td>Symentec/AV</td>
+        <td>pnapdPLBGSAV01.ops.hosting.knxa<br>pnapdPLBGSAV02.ops.hosting.knxa</td>
+      </tr>
+
+      <tr>
+        <td>JUMP_BOX URL</td>
+        <td>pnapdopwnops03.ops.hosting.knxa</td>
+        
+      </tr>
+
+    </table>
+
+  </div>
+
+  <div id="euprod-table" class="table-container">
+
+    <table style="background-color: #E0E0E0">
+
+      <tr>
+
+        <th>Project</th>
+
+        <th>Link</th>
+
+      </tr>
+
+      <tr>
+
+        <td>Downpages</td>
+
+        <td><a href="https://2x-dc2.kenexa.com/kr/eutalentsuitebws/2xlogin.2x" target="_blank">Downpages</a></td>
+
+      </tr>
+
+      <tr>
+
+        <td>GKMQ</td>
+
+        <td><a href="https://peupdadgkmq03:8162/admin/queues.jsp" target="_blank">peupdadgkmq03</a></td>
+
+      </tr>
+
+      <tr>
+
+        <td>GKApp</td>
+
+        <td> <a href="https://eupd-gkapp.vip.hosting-eu.knxa/" target="_blank">GKApp VIP</a><br>
+          <a href="https://peupdadgkapp11.ops-eu.hosting-eu.knxa:11339/api/version"target="_blank">peupdadgkapp11</a><br>
+          <a href="https://peupdadgkapp12.ops-eu.hosting-eu.knxa:11339/api/version"target="_blank">peupdadgkapp12</a><br>
+          <a href="https://peupdadgkapp13.ops-eu.hosting-eu.knxa:11339/api/version"target="_blank">peupdadgkapp13</a><br>
+          <a href="https://peupdadgkapp14.ops-eu.hosting-eu.knxa:11339/api/version"target="_blank">peupdadgkapp14</a><br>
+          <a href="https://peupdadgkapp15.ops-eu.hosting-eu.knxa:11339/api/version"target="_blank">peupdadgkapp15</a><br>
+          <a href="https://peupdadgkapp16.ops-eu.hosting-eu.knxa:11339/api/version"target="_blank">peupdadgkapp16</a><br>
+          <a href="https://peupdadgkapp17.ops-eu.hosting-eu.knxa:11339/api/version"target="_blank">peupdadgkapp17</a><br>
+          <a href="https://peupdadgkapp18.ops-eu.hosting-eu.knxa:11339/api/version"target="_blank">peupdadgkapp18</a><br>
+          <a href="https://peupdadgkapp19.ops-eu.hosting-eu.knxa:11339/api/version"target="_blank">peupdadgkapp19</a><br>
+          <a href="https://peupdadgkapp20.ops-eu.hosting-eu.knxa:11339/api/version"target="_blank">peupdadgkapp20</a><br>
+
+        </td>
+
+      </tr>
+
+      <tr>
+
+        <td>TDI</td>
+
+        <td><a href="https://peupdadgkapp13.ops-eu.hosting-eu.knxa:11339/api/tdi/health"target="_blank">peupdtstdiap03</a><br>
+            <a href="https://peupdadgkapp13.ops-eu.hosting-eu.knxa:11339/api/tdi/health"target="_blank">peupdtstdiap04</a><br>
+
+        </td>
+
+      </tr>
+    
+      <tr>
+
+        <td>onboard</td>
+
+        <td><a href="https://eupd-ob2xapp.vip.hosting-eu.knxa/" target="_blank">Onboard VIP</a><br>
+          <a href="https://peupdob2xapp15.ops-eu.hosting-eu.knxa:9443/kr/api/onboard/checkServerHealth/"target="_blank">peupdob2xapp15</a>
+          <a href="https://peupdob2xapp15.ops-eu.hosting-eu.knxa:9443/kr/eutalentsuitsqa/2xlogin.2x"target="_blank">peupdob2xapp15 Login_page</a><br>
+          <a href="https://peupdob2xapp16.ops-eu.hosting-eu.knxa:9443/kr/api/onboard/checkServerHealth/"target="_blank">peupdob2xapp16</a>
+          <a href="https://peupdob2xapp16.ops-eu.hosting-eu.knxa:9443/kr/eutalentsuitsqa/2xlogin.2x"target="_blank">peupdob2xapp16 Login_page</a><br>
+          <a href="https://peupdob2xapp17.ops-eu.hosting-eu.knxa:9443/kr/api/onboard/checkServerHealth/"target="_blank">peupdob2xapp17</a>
+          <a href="https://peupdob2xapp17.ops-eu.hosting-eu.knxa:9443/kr/eutalentsuitsqa/2xlogin.2x"target="_blank">peupdob2xapp17 Login_page</a><br>
+          <a href="https://peupdob2xapp18.ops-eu.hosting-eu.knxa:9443/kr/api/onboard/checkServerHealth/"target="_blank">peupdob2xapp18</a>
+          <a href="https://peupdob2xapp18.ops-eu.hosting-eu.knxa:9443/kr/eutalentsuitsqa/2xlogin.2x"target="_blank">peupdob2xapp15 Login_page</a><br>
+          <a href="https://peupdob2xapp20.ops-eu.hosting-eu.knxa:9443/kr/api/onboard/checkServerHealth/"target="_blank">peupdob2xapp20</a>
+          <a href="https://peupdob2xapp20.ops-eu.hosting-eu.knxa:9443/kr/eutalentsuitsqa/2xlogin.2x"target="_blank">peupdob2xapp20 Login_page</a><br>
+          <a href="https://peupdob2xapp21.ops-eu.hosting-eu.knxa:9443/kr/api/onboard/checkServerHealth/"target="_blank">peupdob2xapp21</a>
+          <a href="https://peupdob2xapp21.ops-eu.hosting-eu.knxa:9443/kr/eutalentsuitsqa/2xlogin.2x"target="_blank">peupdob2xapp21 Login_page</a><br>
+          <a href="https://peupdob2xapp27.ops-eu.hosting-eu.knxa:9443/kr/api/onboard/checkServerHealth/"target="_blank">peupdob2xapp27</a>
+          <a href="https://peupdob2xapp27.ops-eu.hosting-eu.knxa:9443/kr/eutalentsuitsqa/2xlogin.2x"target="_blank">peupdob2xapp27 Login_page</a><br>
+          <a href="https://peupdob2xapp28.ops-eu.hosting-eu.knxa:9443/kr/api/onboard/checkServerHealth/"target="_blank">peupdob2xapp28</a>
+          <a href="https://peupdob2xapp28.ops-eu.hosting-eu.knxa:9443/kr/eutalentsuitsqa/2xlogin.2x"target="_blank">peupdob2xapp28 Login_page</a><br>
+
+        </td>
+
+      </tr>
+
+      <tr>
+
+        <td>BWS</td>
+
+        <td><a href="https://peupdobbwsap03.ops-eu.hosting-eu.knxa:8080/api/onboard/v1/verifyConnections?expanded=true"target="_blank">peupdobbwsap03</a>,
+          <a href="https://peupdobbwsap03.ops-eu.hosting-eu.knxa:9080/OnboardAdmin/audit/systemHealth"target="_blank">peupdobbwsap03 Admin</a><br>
+          <a href="https://peupdobbwsap04.ops-eu.hosting-eu.knxa:8080/api/onboard/v1/verifyConnections?expanded=true"target="_blank">peupdobbwsap04</a>,
+          <a href="https://peupdobbwsap04.ops-eu.hosting-eu.knxa:9080/OnboardAdmin/audit/systemHealth"target="_blank">peupdobbwsap04 Admin</a>
+
+        </td>
+
+      </tr>
+
+      <tr>
+
+        <td>Workbench</td>
+
+        <td><a href="https://peupdobwbwlp03.ops-eu.hosting-eu.knxa:9443/2xWorkbench/jsp/wbLogin.jsf"target="_blank">peupdobwbwlp03</a><br>
+            <a href="https://peupdobwbwlp04.ops-eu.hosting-eu.knxa:9443/2xWorkbench/jsp/wbLogin.jsf"target="_blank">peupdobwbwlp04</a>
+
+        </td>
+
+      </tr>
+
+      <tr>
+
+        <td>Elastic Search</td>
+
+        <td><a href="https://peupdobbwssr05.ops-eu.hosting-eu.knxa:9200/" target="_blank">peupdobbwssr05</a>,
+          <a href="https://peupdobbwssr05.ops-eu.hosting-eu.knxa:9200/_cluster/health" target="_blank">peupdobbwssr05 cluster health</a><br>
+          <a href="https://peupdobbwssr06.ops-eu.hosting-eu.knxa:9200/" target="_blank">peupdobbwssr06</a>,
+          <a href="https://peupdobbwssr06.ops-eu.hosting-eu.knxa:9200/_cluster/health" target="_blank">peupdobbwssr06 cluster health</a><br>
+          <a href="https://peupdobbwssr07.ops-eu.hosting-eu.knxa:9200/" target="_blank">peupdobbwssr07</a>,
+          <a href="https://peupdobbwssr07.ops-eu.hosting-eu.knxa:9200/_cluster/health" target="_blank">peupdobbwssr07 cluster health</a><br>
+          <a href="https://peupdobbwssr08.ops-eu.hosting-eu.knxa:9200/" target="_blank">peupdobbwssr08</a>,
+          <a href="https://peupdobbwssr08.ops-eu.hosting-eu.knxa:9200/_cluster/health" target="_blank">peupdobbwssr08 cluster health</a>
+
+        </td>
+
+      </tr>
+
+      <tr>
+        <td>AMQ</td>
+        <td><a href="https://peupdobbwsmq03.ops-eu.hosting-eu.knxa:8161/admin/index.jsp"target="_blank">peupdobbwsmq03</a><br>
+          <a href="https://peupdobbwsmq04.ops-eu.hosting-eu.knxa:8161/admin/index.jsp"target="_blank">peupdobbwsmq04</a><br>
+        </td>
+      </tr>
+      <tr>
+        <td>Lucid</td>
+        <td><a href="https://peupdtsadmui01.ops-eu.hosting-eu.knxa:8443/ibp/admin/login?cname=prodTestclient"target="_blank">peupdtsadmui01 Admin</a>
+            <a href="https://peupdtsadmui01.ops-eu.hosting-eu.knxa:9443/ibp/admin/login?cname=prodTestclient"target="_blank">peupdtsadmui01 Foundation</a><br>
+            <a href="https://peupdtsadmui02.ops-eu.hosting-eu.knxa:8443/ibp/admin/login?cname=prodTestclient"target="_blank">peupdtsadmui02 Admin</a>
+            <a href="https://peupdtsadmui02.ops-eu.hosting-eu.knxa:9443/ibp/admin/login?cname=prodTestclient"target="_blank">peupdtsadmui02 Foundation</a><br>
+            <a href="https://peupdtsadmui03.ops-eu.hosting-eu.knxa:9443/"target="_blank">peupdtsadmui03 keycloak</a><br>
+            <a href="https://peupdtsadmui04.ops-eu.hosting-eu.knxa:9443/"target="_blank">peupdtsadmui04 keycloak</a><br>
+            <a href="https://peupdtsobui01.ops-eu.hosting-eu.knxa:9443/onboardui/verifyHealth"target="_blank">peupdtsobui01 ExpressUI</a><br>
+            <a href="https://peupdtsobui02.ops-eu.hosting-eu.knxa:9443/onboardui/verifyHealth"target="_blank">peupdtsobui02 ExpressUI</a>
+        </td>
+      </tr>
+
+      <tr>
+        <td>Muhimbi</td>
+      <td><a href="https://peupdOBMHMBI03.ops-eu.hosting-eu.knxa:41734/Muhimbi.DocumentConverter.WebService/?wsdl" target="_blank">peupdOBMHMBI03.ops-eu.hosting-eu.knxa</a><br>
+          <a href="https://peupdOBMHMBI04.ops-eu.hosting-eu.knxa:41734/Muhimbi.DocumentConverter.WebService/?wsdl" target="_blank">peupdOBMHMBI04.ops-eu.hosting-eu.knxa</a>
+      </td>
+      </tr>
+          
+      <tr>
+
+        <td>Teracotta</td>
+        <td>peupdplterra03.ops-eu.hosting-eu.knxa<br>peupdplterra04.ops-eu.hosting-eu.knxa</td>
+      </tr>
+      
+      <tr>
+      <td>Symentec/AV</td>
+      <td>peupdPLBGSAV01.ops-eu.hosting-eu.knxa<br>peupdPLBGSAV02.ops-eu.hosting-eu.knxa</td>
+</tr>
+
+      <tr>
+        <td>JUMP_BOX URL</td>
+        <td>peupdopwnops07.ops-eu.hosting-eu.knxa</td>
+      </tr>
+
+    </table>
+
+  </div>
+
+  <script>
+
+    function showTable(environment) {
+
+      // Hide all tables
+
+      var tables = document.querySelectorAll('.table-container');
+
+      tables.forEach(function (table) {
+
+        table.style.display = 'none';
+
+      });
+
+      // Show the selected table
+
+      document.getElementById(environment + '-table').style.display = 'block';
+
+    }
+
+  </script>
+
+</body>
+
+ 
+
+</html>
